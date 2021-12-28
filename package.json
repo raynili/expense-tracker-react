@@ -1,0 +1,26 @@
+{
+  "name": "expense-tracker-react",
+  "version": "1.0.0",
+  "description": "Backend for backend tracker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raynili/expense-tracker-react.git"
+  },
+  "author": "Rayni Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raynili/expense-tracker-react/issues"
+  },
+  "homepage": "https://github.com/raynili/expense-tracker-react#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "morgan": "^1.10.0"
+  }
+}
