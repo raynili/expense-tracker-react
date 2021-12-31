@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { numberWithCommas } from '../utils/format';
 
 export const Balance = () => {
     const { transactions } = useContext(GlobalContext);
@@ -12,7 +13,7 @@ export const Balance = () => {
     return (
         <>
             <h4>Your Balance</h4>
-            <h1>{ sign }${ Math.abs(total) }</h1>
+            <h1>{ sign }${ numberWithCommas(Math.abs(total)) }</h1>
         </>
     )
     // anytime we update the transactions, the total amount will automatically render because it's being passed down

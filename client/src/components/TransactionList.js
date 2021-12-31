@@ -1,11 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { GlobalContext } from '../context/GlobalState' // pull in global state
 import { Transaction } from './Transaction';
 
 export const TransactionList = () => {
     //const context = useContext(GlobalContext); // use the Context that you pulled in with this react hook
     // instead of using context.transactions, use decoupling instead
-    const { transactions } = useContext(GlobalContext);
+    const { transactions, getTransactions } = useContext(GlobalContext);
+
+    // whenever make http request from a component, want to do that in useEffect
+
+    useEffect(() => {
+        getTransactions();
+    }, []);
+
 
     // const obj1 = {
     //     newKey:"key",
